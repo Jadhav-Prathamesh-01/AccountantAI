@@ -192,7 +192,7 @@ export default function Home() {
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <p className="text-white text-lg leading-relaxed">
-                    Don't know what to write.
+                    Don&apos;t know what to write.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -212,7 +212,7 @@ export default function Home() {
               {/* Highlight statement */}
               <div className="pt-4 border-t border-gray-800">
                 <p className="text-white text-xl font-medium italic">
-                  "Silence in 2025 = Invisibility."
+                  &ldquo;Silence in 2025 = Invisibility.&rdquo;
                 </p>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function Home() {
             {/* Right side - Description and Features */}
             <div className="space-y-6">
               <p className="text-white text-lg leading-relaxed">
-                Transform your LinkedIn presence with the world's first AI-powered content engine designed exclusively for Chartered Accountants and Finance Leaders. Generate professional, engaging content that builds your authority and attracts high-value clients.
+                Transform your LinkedIn presence with the world&apos;s first AI-powered content engine designed exclusively for Chartered Accountants and Finance Leaders. Generate professional, engaging content that builds your authority and attracts high-value clients.
               </p>
               
               {/* Feature Cards */}
@@ -389,13 +389,13 @@ export default function Home() {
             {/* Enhanced Bio */}
             <div className="text-center max-w-4xl mx-auto">
               <p className="text-gray-200 text-lg leading-relaxed mb-6">
-                As a Chartered Accountant with over 15 years of experience, I've witnessed firsthand the challenges my peers face in building their personal brands and attracting high-value clients.
+                As a Chartered Accountant with over 15 years of experience, I&apos;ve witnessed firsthand the challenges my peers face in building their personal brands and attracting high-value clients.
               </p>
               <p className="text-gray-200 text-lg leading-relaxed mb-6">
                 After successfully building two companies and raising significant venture capital, I realized that most CAs struggle with LinkedIn content creation, compliance concerns, and time management.
               </p>
               <p className="text-blue-400 text-lg leading-relaxed mb-6 font-semibold">
-                That's when I decided to create AccountantAI.
+                That&apos;s when I decided to create AccountantAI.
               </p>
               <p className="text-gray-200 text-lg leading-relaxed">
                 A platform built specifically for Chartered Accountants, by someone who understands the unique challenges, compliance requirements, and professional standards of our industry. <span className="text-white font-semibold">Because every CA deserves to build a personal brand that attracts the clients they truly want.</span>
@@ -439,7 +439,7 @@ export default function Home() {
             {/* Scarcity reminder */}
             <div className="pt-4 border-t border-gray-700">
               <p className="text-white text-xl font-medium italic">
-                "When the 50 seats are gone, doors close."
+                &ldquo;When the 50 seats are gone, doors close.&rdquo;
               </p>
             </div>
           </div>
