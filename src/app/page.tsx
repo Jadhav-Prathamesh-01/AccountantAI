@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 export default function Home() {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [textIndex, setTextIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
 
   const fullText = 'AccountantAI';
@@ -17,11 +17,11 @@ export default function Home() {
   const [isDeletingBenefit, setIsDeletingBenefit] = useState(false);
   const [benefitIndex, setBenefitIndex] = useState(0);
 
-  const benefitTexts = [
+  const benefitTexts = useMemo(() => [
     'Exclusive discounted pricing',
     'Input into feature roadmap',
     'First access before public launch'
-  ];
+  ], []);
 
   // Set client flag on mount
   useEffect(() => {
@@ -47,7 +47,6 @@ export default function Home() {
         } else {
           // Reset for next cycle
           setIsDeleting(false);
-          setTextIndex((prev) => (prev + 1) % fullText.length);
         }
       }
     }, isDeleting ? 100 : 150); // Faster deletion, slower typing
@@ -128,7 +127,7 @@ export default function Home() {
             {/* Metadata */}
             <div className="flex flex-wrap gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
-                <img src="/avatar.jpg" alt="Avatar" className="w-6 h-6 rounded-full object-cover" />
+                <Image src="/avatar.jpg" alt="Avatar" width={24} height={24} className="w-6 h-6 rounded-full object-cover" />
                 <span>Trusted by 500+ CAs</span>
               </div>
               <div className="flex items-center gap-2">
@@ -154,20 +153,20 @@ export default function Home() {
           </div>
 
           {/* 2x2 Image Grid */}
-          <div className="grid grid-cols-2 gap-6 w-full max-w-6xl mx-auto mt-16">
-            <div className="aspect-square">
-              <img src="/mugen-1.jpg" alt="Mugen Template 1" className="w-full h-full object-cover rounded-lg" />
-            </div>
-            <div className="aspect-square">
-              <img src="/mugen-2.jpg" alt="Mugen Template 2" className="w-full h-full object-cover rounded-lg" />
-            </div>
-            <div className="aspect-square">
-              <img src="/mugen-3.jpg" alt="Mugen Template 3" className="w-full h-full object-cover rounded-lg" />
-            </div>
-            <div className="aspect-square">
-              <img src="/mugen-4.jpg" alt="Mugen Template 4" className="w-full h-full object-cover rounded-lg" />
-            </div>
-          </div>
+              <div className="grid grid-cols-2 gap-6 w-full max-w-6xl mx-auto mt-16">
+                <div className="aspect-square">
+                  <Image src="/mugen-1.jpg" alt="Mugen Template 1" width={400} height={400} className="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div className="aspect-square">
+                  <Image src="/mugen-2.jpg" alt="Mugen Template 2" width={400} height={400} className="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div className="aspect-square">
+                  <Image src="/mugen-3.jpg" alt="Mugen Template 3" width={400} height={400} className="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div className="aspect-square">
+                  <Image src="/mugen-4.jpg" alt="Mugen Template 4" width={400} height={400} className="w-full h-full object-cover rounded-lg" />
+                </div>
+              </div>
         </div>
       </section>
 
@@ -361,9 +360,11 @@ export default function Home() {
             <div className="mb-8">
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-lg opacity-30 scale-110"></div>
-                <img 
+        <Image
                   src="/647a571d951cf02b2826ad76_headshot justing.webp" 
                   alt="Twinkle Dixit" 
+                  width={144}
+                  height={144}
                   className="relative w-36 h-36 rounded-full mx-auto object-cover border-4 border-white/20 shadow-2xl"
                 />
               </div>
@@ -470,9 +471,11 @@ export default function Home() {
             
             {/* Hand image */}
             <div className="flex justify-center items-center">
-              <img 
+            <Image
                 src="/hand.jpg" 
                 alt="Hand" 
+                width={558}
+                height={420}
                 style={{
                   width: '558px',
                   aspectRatio: 'auto 558 / 420',
